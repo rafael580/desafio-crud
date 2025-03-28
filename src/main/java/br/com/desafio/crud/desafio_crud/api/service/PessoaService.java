@@ -7,7 +7,7 @@ import br.com.desafio.crud.desafio_crud.domain.repository.EnderecoRepository;
 import br.com.desafio.crud.desafio_crud.domain.repository.PessoaRepository;
 
 import org.springframework.stereotype.Service;
-import org.springframework.transaction.annotation.Transactional;
+import jakarta.transaction.Transactional;
 
 import java.time.LocalDate;
 import java.time.Period;

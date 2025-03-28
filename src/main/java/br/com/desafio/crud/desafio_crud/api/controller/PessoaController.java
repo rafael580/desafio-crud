@@ -32,17 +32,16 @@ public class PessoaController {
         return ResponseEntity.ok(pessoaService.criarPessoa(pessoa));
     }
 
-//    @PutMapping("/{id}")
- //   public ResponseEntity<Pessoa> atualizarPessoa(@PathVariable Long id, @RequestBody Pessoa pessoa) {
-  //      return ResponseEntity.ok(pessoaService.atualizarPessoa(id, pessoa));
-   // }
+    @PutMapping("/{id}")
+      public ResponseEntity<Pessoa> atualizarPessoa(@PathVariable Long id, @RequestBody Pessoa pessoa) {
+          return ResponseEntity.ok(pessoaService.atualizarPessoa(id, pessoa));
+    }
 
     @DeleteMapping("/{id}")
     public ResponseEntity<Void> excluirPessoa(@PathVariable Long id) {
         pessoaService.excluirPessoa(id);
         return ResponseEntity.noContent().build();
     }
-
 
     @GetMapping("/{id}/idade")
     public ResponseEntity<Integer> calcularIdade(@PathVariable Long id) {

@@ -2,6 +2,7 @@ package br.com.desafio.crud.desafio_crud.domain.entity;
 
 
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
@@ -48,14 +49,15 @@ public class Endereco implements Serializable {
     private String cep;
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "pessoa_id")
+    @JsonIgnore
     private Pessoa pessoa;
     @Column(columnDefinition = "TIMESTAMP WITHOUT TIME ZONE")
     private Instant createdAt;
     @Column(columnDefinition = "TIMESTAMP WITHOUT TIME ZONE")
     private Instant createdUpdateAt;
 
-    public Endereco(Long id) {
-        this.id = id;
+    public Endereco() {
+
     }
     public Endereco(Long id, String rua, Integer numero, String bairro, String cidade, String estado, String cep) {
         this.id = id;
