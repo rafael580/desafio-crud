@@ -3,6 +3,8 @@ package br.com.desafio.crud.desafio_crud.domain.entity;
 import jakarta.persistence.*;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
+import lombok.Getter;
+import lombok.Setter;
 
 import java.io.Serializable;
 import java.time.Instant;
@@ -10,10 +12,13 @@ import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 
-@Entity
-@Table(name = "pessoa")
+
+
+
 @Data
 @EqualsAndHashCode(onlyExplicitlyIncluded = true)
+@Entity
+@Table(name = "pessoa")
 public class Pessoa implements Serializable {
 
     private static final Long serialVersionUID = 1L;

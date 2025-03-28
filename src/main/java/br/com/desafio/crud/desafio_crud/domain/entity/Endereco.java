@@ -5,11 +5,14 @@ package br.com.desafio.crud.desafio_crud.domain.entity;
 import jakarta.persistence.*;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
+import lombok.Getter;
+import lombok.Setter;
 
 import java.io.Serializable;
 import java.time.Instant;
 
-
+@Getter
+@Setter
 @Entity
 @Table(name = "endereco")
 @Data
